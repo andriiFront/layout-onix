@@ -1,0 +1,104 @@
+@import "utils";
+
+.aside {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  grid-column: 1 / 2;
+  grid-row: 1 / end;
+  padding: 30px 30px 20px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 19px;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-logo {
+      background-image: url("../images/logo/Logo@3x.svg");
+    }
+
+    &-search {
+      position: relative;
+      padding: 5px;
+      color: #fff;
+      opacity: 0.5;
+      margin-left: 60px;
+    
+      & .fas {
+        position: relative;
+        top: -5px;
+      }
+    }
+    
+  }
+
+  &__title {
+    margin-left: 13px;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  &__card {
+    margin-top: 32px;
+    position: relative;
+    left: -30px;
+  }
+
+  &__statistic-container {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__statistic {
+    width: 120px;
+  }
+
+  &__number {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__nav-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav-link {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 0;
+    display: inline-block;
+
+    &-active {
+      color: #878787;
+      font-size: 12px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+ 
+
+}
