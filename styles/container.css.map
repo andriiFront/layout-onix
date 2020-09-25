@@ -1,0 +1,1 @@
+{"version":3,"sources":["container.scss"],"names":[],"mappings":"AAEA;EACE,iBAAiB;EACjB,cAAc;EACd,aAAa;EACb,gCAAgC;EAChC,wBAAwB,EAAA","file":"container.css","sourcesContent":["@import \"utils\";\n\n.container {\n  max-width: 1440px;\n  margin: 0 auto;\n  display: grid;\n  grid-template-columns: 270px 1fr;\n  grid-template-rows: auto;\n}\n"]}
