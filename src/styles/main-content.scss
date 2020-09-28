@@ -1,0 +1,15 @@
+@import "utils";
+
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+
+  @media screen and (max-width: 750px) {
+    & {
+      margin-top: 0;
+    }
+  }
+}
