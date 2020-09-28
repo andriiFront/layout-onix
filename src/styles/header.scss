@@ -3,7 +3,7 @@
 .header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  height: 136px;
+  height: fit-content;
   overflow: hidden;
   max-width: 1170px;
   box-sizing: border-box;
@@ -11,21 +11,65 @@
   padding: 40px 30px;
   padding-bottom: 0;
 
+  @media screen and (max-width: 650px) {
+    & {
+      height: fit-content;
+      padding: 0;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    & {
+      padding-top: 0;
+      border-top: 0.1px solid transparent;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 650px) {
+      & {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      & {
+        margin-top: 28px;
+      }
+    }
   }
 
   &__left {
     display: flex;
     align-items: center;
+    width: 365px;
+
+    @media screen and (max-width: 450px) {
+      & {
+        justify-content: space-between;
+        width: 70%;
+      }
+    }
   }
 
   &__title {
     margin-left: 15px;
     font-size: 32px;
     width: 265px;
+
+    @media screen and (max-width: 450px) {
+      & {
+        line-height: 1;
+        font-size: 24px;
+        width: inherit;
+      }
+    }
   }
 
   &___more {
@@ -41,9 +85,9 @@
   &__dots {
     display: inline-block;
     height: 0;
-    position: relative;
+    position: absolute;
     color: #d8d8d8;
-    top: -13px;
+    top: 2px;
     left: 6px;
     font-size: 18px;
   }
@@ -53,11 +97,41 @@
     display: flex;
     align-items: center;
     justify-content: right;
+    
+    @media screen and (min-width: 650px) and (max-width: 1000px) {
+      & {
+        margin-top: 5px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 212px;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      & {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      & {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__photos {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 650px) and (max-width: 1000px) {
+      & {
+        order: 3;
+        margin-top: 12px;
+      }
+    }
   }
 
   &__photo {
@@ -85,6 +159,21 @@
     box-sizing: border-box;
     border: none;
     margin-left: 15px;
+
+    @media screen and (max-width: 450px) {
+      & {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__share {
+    
+    @media screen and (min-width: 650px) and (max-width: 1000px) {
+      & {
+        order: 1;
+      }
+    }
   }
 
   &__chat {
@@ -94,6 +183,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 1000px) {
+      & {
+        order: 2;
+      }
+    }
   }
 
   &__chat-icon {
@@ -117,6 +212,18 @@
 
   &__nav {
     box-sizing: border-box;
-    width: 761px;
+    width: fit-content;
+
+    @media screen and (min-width: 650px) and (max-width: 1000px) {
+      & {
+        width: fit-content;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      & {
+        margin: 0 auto;
+      }
+    }
   }
 }

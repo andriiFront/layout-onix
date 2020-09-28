@@ -8,9 +8,33 @@
   grid-row: 1 / end;
   padding: 30px 30px 20px;
 
+  @media screen and (max-width: 900px) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 15px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      padding: 10px;
+      padding-top: 30px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+      & {
+        order: 1;
+      }
+    }
   }
 
   &__btn {
@@ -55,11 +79,32 @@
     margin-top: 32px;
     position: relative;
     left: -30px;
+
+    @media screen and (max-width: 900px) {
+      & {
+        order: 3;
+        margin-top: 0;
+        position: static;
+        left: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        margin-top: 25px;
+      }
+    }
   }
 
   &__statistic-container {
     display: flex;
     margin-top: 20px;
+
+    @media screen and (max-width: 900px) {
+      & {
+        order: 4;
+      }
+    }
   }
 
   &__statistic {
@@ -81,6 +126,22 @@
     margin-top: 25px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+      & {
+        order: 2;
+        margin-left: 11%;
+        align-items: baseline;
+        flex-direction: row;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        order: 4;
+        margin-left: 0;
+      }
+    }
   }
 
   &__nav-link {
@@ -96,6 +157,12 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+      & {
+        padding: 8px 7px;
+      }
     }
   }
 
