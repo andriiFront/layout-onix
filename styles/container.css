@@ -4,5 +4,8 @@
   display: grid;
   grid-template-columns: 270px 1fr;
   grid-template-rows: auto; }
+  @media screen and (max-width: 900px) {
+    .container {
+      display: block; } }
 
 /*# sourceMappingURL=container.css.map */

@@ -7,6 +7,9 @@
   display: grid;
   grid-template-columns: 40px 577px 53px;
   gap: 30px 0; }
+  @media screen and (max-width: 750px) {
+    .todos__container {
+      grid-template-columns: 40px 1fr 53px; } }
 
 .todos__mark {
   position: relative;
@@ -29,6 +32,12 @@
   width: 461px;
   padding-left: 20px;
   font-size: 16px; }
+  @media screen and (max-width: 750px) {
+    .todos__text {
+      padding: 0 15px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; } }
 
 .todos__message {
   margin-top: 20px;
@@ -39,12 +48,19 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px; }
+  @media screen and (max-width: 750px) {
+    .todos__message {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; } }
 
 .todos__progects {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .todos__img {
   margin-right: 10px;
@@ -55,6 +71,9 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center; }
+  @media screen and (max-width: 750px) {
+    .todos__img {
+      margin-bottom: 10px; } }
 
 .todos__time {
   width: 100%;

@@ -5,6 +5,28 @@
   grid-column: 1 / 2;
   grid-row: 1 / end;
   padding: 30px 30px 20px; }
+  @media screen and (max-width: 900px) {
+    .aside {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding-top: 15px; } }
+  @media screen and (max-width: 600px) {
+    .aside {
+      padding: 10px;
+      padding-top: 30px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
   .aside__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12,6 +34,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media screen and (max-width: 900px) {
+      .aside__header {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
   .aside__btn {
     background-color: #000;
     background-size: cover;
@@ -41,11 +68,27 @@
     margin-top: 32px;
     position: relative;
     left: -30px; }
+    @media screen and (max-width: 900px) {
+      .aside__card {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        margin-top: 0;
+        position: static;
+        left: 0; } }
+    @media screen and (max-width: 600px) {
+      .aside__card {
+        margin-top: 25px; } }
   .aside__statistic-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 20px; }
+    @media screen and (max-width: 900px) {
+      .aside__statistic-container {
+        -webkit-box-ordinal-group: 5;
+            -ms-flex-order: 4;
+                order: 4; } }
   .aside__statistic {
     width: 120px; }
   .aside__number {
@@ -64,6 +107,25 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+    @media screen and (max-width: 900px) {
+      .aside__nav-list {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        margin-left: 11%;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    @media screen and (max-width: 600px) {
+      .aside__nav-list {
+        -webkit-box-ordinal-group: 5;
+            -ms-flex-order: 4;
+                order: 4;
+        margin-left: 0; } }
   .aside__nav-link {
     color: #fff;
     font-size: 14px;
@@ -74,5 +136,8 @@
       font-size: 12px; }
     .aside__nav-link:hover {
       cursor: pointer; }
+    @media screen and (max-width: 900px) {
+      .aside__nav-link {
+        padding: 8px 7px; } }
 
 /*# sourceMappingURL=aside.css.map */
